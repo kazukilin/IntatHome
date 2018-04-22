@@ -7,7 +7,7 @@ namespace intathome.Controllers
 {
     public class lightController : ApiController
     {
-        static string begins, ends, ontimes;
+        static string begins, ends, ontimes,ipadd;
         static bool responses,functions,mains,seconds;
 
         [HttpGet]
@@ -94,6 +94,14 @@ namespace intathome.Controllers
                         second = seconds,
                     };
                     return json = DynamicJson.Serialize(obj);
+                }
+                else if (id == 3)
+                {
+                    while (sdr.Read() == true)
+                    {
+                        ipadd = (string)sdr["ipaddress"];
+                    }
+                    return ipadd;
                 }
             }
             return null;

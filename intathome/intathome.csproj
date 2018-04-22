@@ -83,13 +83,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\batteryController.cs" />
+    <Compile Include="Controllers\endTimeController.cs" />
+    <Compile Include="Controllers\ipaddController.cs" />
+    <Compile Include="Controllers\IsfuncController.cs" />
     <Compile Include="Controllers\lightController.cs" />
+    <Compile Include="Controllers\onTimeController.cs" />
     <Compile Include="Controllers\responseController.cs" />
+    <Compile Include="Controllers\startTimeController.cs" />
     <Compile Include="DynamicJson.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
