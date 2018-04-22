@@ -89,7 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Base64Encoder.cs" />
     <Compile Include="Controllers\batteryController.cs" />
+    <Compile Include="Controllers\blobController.cs" />
     <Compile Include="Controllers\endTimeController.cs" />
     <Compile Include="Controllers\ipaddController.cs" />
     <Compile Include="Controllers\IsfuncController.cs" />

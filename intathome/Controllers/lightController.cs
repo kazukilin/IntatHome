@@ -103,6 +103,25 @@ namespace intathome.Controllers
                     }
                     return ipadd;
                 }
+                else if (id == 4)
+                {
+                    dynamic objc = null;
+                    while (sdr.Read() == true)
+                    {
+                        int versions = (int)sdr["version"];
+                        int sizes = (int)sdr["filesize"];
+                        byte[] tmp = new byte[sizes];
+                        tmp = (byte[])sdr["file"];
+                        var obj = new
+                        {
+                            file = System.Convert.ToBase64String(tmp),
+                            version = versions,
+                            size = sizes
+                        };
+                        objc = obj;
+                    }
+                    return objc;
+                }
             }
             return null;
         }
