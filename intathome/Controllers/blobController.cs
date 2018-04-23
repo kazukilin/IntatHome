@@ -17,8 +17,7 @@ namespace intathome.Controllers
         public string Get()
         {
             var obj = lightController.connectSQL("select * from voice", 4);
-            var json = DynamicJson.Serialize(obj);
-            return json;
+            return obj;
         }
         [HttpPost]
         public string Post(HttpRequestMessage request)

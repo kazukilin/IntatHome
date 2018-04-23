@@ -14,8 +14,7 @@ namespace intathome.Controllers
         public string Get()
         {
             var obj = connectSQL("select * from lightsetting",0);
-            var json = DynamicJson.Serialize(obj);
-            return json;
+            return obj;
         }
         [HttpPost]
         public string Post(HttpRequestMessage request)
@@ -118,7 +117,7 @@ namespace intathome.Controllers
                             version = versions,
                             size = sizes
                         };
-                        objc = obj;
+                        objc = DynamicJson.Serialize(obj);
                     }
                     return objc;
                 }

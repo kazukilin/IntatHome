@@ -93,6 +93,9 @@
     <Compile Include="Controllers\batteryController.cs" />
     <Compile Include="Controllers\blobController.cs" />
     <Compile Include="Controllers\endTimeController.cs" />
+    <Compile Include="Controllers\getfilesizeController.cs" />
+    <Compile Include="Controllers\getresponseController.cs" />
+    <Compile Include="Controllers\getversionController.cs" />
     <Compile Include="Controllers\ipaddController.cs" />
     <Compile Include="Controllers\IsfuncController.cs" />
     <Compile Include="Controllers\lightController.cs" />

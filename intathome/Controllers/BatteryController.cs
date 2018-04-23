@@ -9,8 +9,7 @@ namespace intathome.Controllers
         public string Get()
         {
             var obj = lightController.connectSQL("select * from battery", 2);
-            var json = DynamicJson.Serialize(obj);
-            return json;
+            return obj;
         }
         public string Post(HttpRequestMessage request)
         {
