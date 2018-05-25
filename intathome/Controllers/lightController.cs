@@ -121,6 +121,18 @@ namespace intathome.Controllers
                     }
                     return objc;
                 }
+                else if(id == 5)
+                {
+                    int count = 0;
+                    while(sdr.Read() == true)
+                    {
+                        visitorController.img.Add((byte[])sdr["image"]);
+                        visitorController.dt.Add((string)sdr["date"]);
+                        visitorController.tm.Add((string)sdr["time"]);
+                        visitorController.sz.Add((int)sdr["size"]);
+                    }
+                    return null;
+                }
             }
             return null;
         }
