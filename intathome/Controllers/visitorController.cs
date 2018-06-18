@@ -22,8 +22,16 @@ namespace intathome.Controllers
         [HttpGet]
         public string Get()
         {
-            //var obj = lightController.connectSQL("select * from visitor", 5);
-            return "Under Construction...";
+            var obj = lightController.connectSQL("select * from visitor", 5);
+            var objc = new
+            {
+                date = dt,
+                time = tm,
+                image = img,
+                size = sz
+            };
+            var objct = DynamicJson.Serialize(objc);
+            return objct;
         }
         [HttpPost]
         public string Post(HttpRequestMessage request)
